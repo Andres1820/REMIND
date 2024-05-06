@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">REMIND</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="mis_proyectos">Mis Proyectos</string>
+    <string name="nuevo_proyecto">Nuevo Proyecto</string>
+    <string name="menu">Menu</string>
+    <string name="mis_tareas">Mis Tareas</string>
+    <string name="alerta">Alerta</string>
+    <string name="cuenta">Cuenta</string>
+    <string name="cambiar_contrasena">Cambiar Contraseña</string>
+    <string name="cerrar_sesion">Cerrar Sesión</string>
 </resources>

@@ -18,11 +18,11 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/nomAPP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="REMIND"
+            android:text="@string/app_name"
             android:textColor="#7289DA"
             android:textColorLink="#FFFFFF"
             android:textSize="34sp"
@@ -46,22 +46,24 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnIngresar"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:backgroundTint="#7289da"
-            android:text="Ingresar"
-            android:textSize="36sp"
+            android:layout_marginStart="10dp"
+            android:text="@string/ingresar"
+            android:textSize="30sp"
             app:strokeColor="#DC1515" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnRegistrarse"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:backgroundTint="#7289da"
-            android:text="Registrarse"
-            android:textSize="30sp" />
+            android:layout_marginEnd="10dp"
+            android:text="@string/registrarse"
+            android:textSize="25sp" />
     </LinearLayout>
 </LinearLayout>
