@@ -3,6 +3,8 @@ package com.example.remind
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -18,20 +20,56 @@ class CuentaActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        cerrarSesion()
-        inicio()
+        //Se reciben y posteriormente se cargan los parametros de la activity anterior
+        val nombre = intent.getStringExtra("nombre")
+        //Toast.makeText(this, nombre, Toast.LENGTH_SHORT).show()
+        cargarParametros(nombre.toString())
+
+        misTarea(nombre.toString())
+        salir(nombre.toString())
+        inicio(nombre.toString())
+        cerrarSesion(nombre.toString())
     }
-    private fun inicio (){
-        val button : Button = findViewById(R.id.btnVolver)
+
+    private fun misTarea(nombre: String) {
+        val button : Button = findViewById(R.id.btnMTareas)
         button.setOnClickListener{
-            val intent = Intent(this, InicioActivity::class.java)
+            val intent = Intent(this, TareasActivity::class.java).apply {
+                putExtra("nombre", nombre)
+            }
             startActivity(intent)
         }
     }
-    private fun cerrarSesion (){
+
+    private fun cargarParametros(nombre : String) {
+        val myTextView = findViewById<TextView>(R.id.Txtnombre)
+        myTextView.text = nombre
+    }
+
+    private fun salir (nombre: String){
+        val button : Button = findViewById(R.id.btnVolver)
+        button.setOnClickListener{
+            val intent = Intent(this, InicioActivity::class.java).apply {
+                putExtra("nombre", nombre)
+            }
+            startActivity(intent)
+        }
+    }
+    private fun inicio (nombre: String){
+        val button : Button = findViewById(R.id.btnMenu)
+        button.setOnClickListener{
+            val intent = Intent(this, InicioActivity::class.java).apply {
+                putExtra("nombre", nombre)
+            }
+            startActivity(intent)
+        }
+    }
+    private fun cerrarSesion (nombre: String){
         val button : Button = findViewById(R.id.btnCerrarSesion)
         button.setOnClickListener{
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java).apply {
+                putExtra("nombre", nombre)
+            }
             startActivity(intent)
         }
     }

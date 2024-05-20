@@ -6,12 +6,25 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.REMIND"
         tools:targetApi="31">
+        <activity
+            android:name=".ProyectoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NuevoProyectoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TareasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NotificacionesActivity"
+            android:exported="false"
+            android:theme="@style/Theme.REMIND" />
         <activity
             android:name=".CuentaActivity"
             android:exported="false" />

@@ -12,4 +12,24 @@
     <string name="cuenta">Cuenta</string>
     <string name="cambiar_contrasena">Cambiar Contraseña</string>
     <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="correo">Correo</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="nombre">Nombre</string>
+    <string name="atras">Atras</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+    <string name="proyecto_1">Proyecto 1</string>
+    <string name="nueva_tarea">Nueva Tarea</string>
+    <string name="proyecto_2">Proyecto 2</string>
+    <string name="proyecto_3">Proyecto 3</string>
+    <string name="notificaciones">Notificaciones</string>
+    <string name="nombre_del_proyecto">Nombre del Proyecto</string>
+    <string name="descripci_n">Descripción</string>
+    <string name="agregar">Agregar</string>
+    <string name="tarea_1">Tarea 1</string>
+    <string name="tarea_2">Tarea 2</string>
+    <string name="tarea_3">Tarea 3</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="selecciona_un_proyecto">Selecciona un Proyecto</string>
 </resources>

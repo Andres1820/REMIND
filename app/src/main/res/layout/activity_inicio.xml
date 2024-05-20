@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="#D1E1EC"
+        android:background="#EEF6FB"
         android:orientation="vertical">
 
         <LinearLayout
@@ -58,10 +58,48 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.4"
-        android:background="#D1E1EC"
+        android:layout_weight="0.5"
+        android:background="#EEF6FB"
         android:gravity="bottom|right"
         android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnProyecto1"
+                android:layout_marginVertical="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/proyecto_1"
+                android:backgroundTint="#7289DA"
+                android:textColor="@color/white"
+                android:textSize="20dp"/>
+
+            <Button
+                android:id="@+id/btnProyecto2"
+                android:layout_marginVertical="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/proyecto_2"
+                android:backgroundTint="#7289DA"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btnProyecto3"
+                android:layout_marginVertical="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/proyecto_3"
+                android:backgroundTint="#7289DA"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/btnNProyecto"
@@ -80,7 +118,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="#D1E1EC"
+        android:background="#EEF6FB"
         android:gravity="center_vertical"
 
         android:orientation="horizontal">
