@@ -63,14 +63,12 @@ class InicioActivity : AppCompatActivity() {
             Toast.makeText(this, "Debes seleccionar un proyecto", Toast.LENGTH_SHORT).show()
         }
     }
+    //La activity no funciona y genera que la aplicación se cierre
     /**
-     * La activity no funciona y genera que la aplicación se cierre
     private fun nuevoProyecto(nombre : String) {
         val button :Button = findViewById(R.id.btnNProyecto)
         button.setOnClickListener{
-            val intent = Intent(this, ProyectoActivity::class.java).apply {
-                putExtra("nombre", nombre)
-            }
+            val intent = Intent(this, NuevoProyectoActivity::class.java)
             startActivity(intent)
         }
     }

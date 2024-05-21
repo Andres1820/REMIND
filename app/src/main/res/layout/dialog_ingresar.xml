@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_width="360dp"
+    android:layout_height="400dp"
+    android:layout_marginHorizontal="5dp"
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
@@ -10,23 +11,26 @@
         android:id="@+id/btnCerrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="1dp"
+        android:layout_marginVertical="15dp"
         android:backgroundTint="#7289da" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginVertical="15dp"
+        android:layout_marginHorizontal="10dp"
         android:layout_weight="1"
-        android:gravity="bottom|center_horizontal"
+        android:gravity="center_vertical"
         android:orientation="vertical">
 
 
         <EditText
             android:id="@+id/correo"
-            android:layout_width="match_parent"
+            android:layout_width="340dp"
             android:layout_height="wrap_content"
+            android:gravity="left"
             android:hint="@string/correo"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:textSize="30dp" />
 
     </LinearLayout>
@@ -34,15 +38,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
         android:layout_weight="1"
-        android:gravity="center_horizontal"
+        android:gravity="center_vertical"
         android:orientation="vertical">
 
 
         <EditText
             android:id="@+id/contraseña"
-            android:layout_width="match_parent"
+            android:layout_width="340dp"
             android:layout_height="wrap_content"
+            android:gravity="left"
             android:hint="@string/contrase_a"
             android:inputType="textPassword"
             android:textSize="30dp" />
@@ -54,6 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#7289da"
+        android:layout_marginVertical="15dp"
         android:text="@string/ingresar"
         android:textSize="30sp" />
 

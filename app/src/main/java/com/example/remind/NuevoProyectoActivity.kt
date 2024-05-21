@@ -18,7 +18,7 @@ class NuevoProyectoActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val nombre = intent.getStringExtra("nombre")
+        //val nombre = intent.getStringExtra("nombre")
         //Toast.makeText(this, nombre, Toast.LENGTH_SHORT).show()
 
 
