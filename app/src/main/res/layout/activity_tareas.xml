@@ -21,7 +21,6 @@
             android:gravity="left|center_vertical"
             android:orientation="horizontal">
 
-
             <Button
                 android:id="@+id/btnVolver"
                 android:layout_width="wrap_content"
@@ -63,43 +62,25 @@
         android:gravity="bottom|right"
         android:orientation="vertical">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginHorizontal="20dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_weight="1">
 
-            <Button
-                android:id="@+id/btnTarea1"
-                android:layout_marginVertical="5dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tarea_1"
-                android:backgroundTint="#7289DA"
-                android:textColor="@color/white"
-                android:textSize="20dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="parent"
+                tools:ignore="MissingConstraints" />
 
-            <Button
-                android:id="@+id/btnTarea2"
-                android:layout_marginVertical="5dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tarea_2"
-                android:backgroundTint="#7289DA"
-                android:textColor="@color/white"
-                android:textSize="20dp" />
 
-            <Button
-                android:id="@+id/btnTarea3"
-                android:layout_marginVertical="5dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tarea_3"
-                android:backgroundTint="#7289DA"
-                android:textColor="@color/white"
-                android:textSize="20dp" />
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
             android:id="@+id/btnNProyecto"

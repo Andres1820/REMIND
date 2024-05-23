@@ -3,15 +3,19 @@ package com.example.remind
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class TareasActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         enableEdgeToEdge()
         setContentView(R.layout.activity_tareas)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -19,12 +23,17 @@ class TareasActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val RecyclerView = findViewById<RecyclerView>(R.id.recycleView)
+        val adapter = CustomAdapter()
+
+        RecyclerView.layoutManager = LinearLayoutManager(this)
+        RecyclerView.adapter = adapter
         val nombre = intent.getStringExtra("nombre")
         //Toast.makeText(this, nombre, Toast.LENGTH_SHORT).show()
 
-        tareaUno()
-        tareaDos()
-        tareaTres()
+        //tareaUno()
+        //tareaDos()
+        //tareaTres()
         salir(nombre.toString())
         inicio(nombre.toString())
         notificaciones(nombre.toString())
@@ -32,6 +41,7 @@ class TareasActivity : AppCompatActivity() {
     }
 
     //metodos para selecionar una tarea
+    /**
     private fun tareaUno(){
         val button :Button = findViewById(R.id.btnTarea1)
         button.setOnClickListener {
@@ -52,6 +62,7 @@ class TareasActivity : AppCompatActivity() {
             Toast.makeText(this, "Tarea 3 selecionada", Toast.LENGTH_SHORT).show()
         }
     }
+    **/
     //cierre de metodos para selecionar una tarea
     private fun salir (nombre : String){
         val button : Button = findViewById(R.id.btnVolver)
