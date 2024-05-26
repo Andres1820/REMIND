@@ -1,9 +1,12 @@
 package com.example.remind
 
+import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class TareasActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -25,77 +29,58 @@ class TareasActivity : AppCompatActivity() {
         }
         val RecyclerView = findViewById<RecyclerView>(R.id.recycleView)
         val adapter = CustomAdapter()
-
         RecyclerView.layoutManager = LinearLayoutManager(this)
         RecyclerView.adapter = adapter
         val nombre = intent.getStringExtra("nombre")
+        val proyecto = intent.getStringExtra("proyecto")
+        cargarParametros(proyecto.toString())
         //Toast.makeText(this, nombre, Toast.LENGTH_SHORT).show()
-
-        //tareaUno()
-        //tareaDos()
-        //tareaTres()
-        salir(nombre.toString())
-        inicio(nombre.toString())
-        notificaciones(nombre.toString())
-        cuenta(nombre.toString())
+        salir(nombre.toString(), proyecto.toString())
+        inicio(nombre.toString(), proyecto.toString())
+        notificaciones(nombre.toString(), proyecto.toString())
+        cuenta(nombre.toString(), proyecto.toString())
+    }
+    private fun cargarParametros(proyecto : String) {
+        val myTextView = findViewById<TextView>(R.id.titulo)
+        myTextView.text = proyecto
     }
 
-    //metodos para selecionar una tarea
-    /**
-    private fun tareaUno(){
-        val button :Button = findViewById(R.id.btnTarea1)
-        button.setOnClickListener {
-            Toast.makeText(this, "Tarea 1 selecionada", Toast.LENGTH_SHORT).show()
-        }
-    }
-
-    private fun tareaDos(){
-        val button :Button = findViewById(R.id.btnTarea2)
-        button.setOnClickListener {
-            Toast.makeText(this, "Tarea 2 selecionada", Toast.LENGTH_SHORT).show()
-        }
-    }
-
-    private fun tareaTres(){
-        val button :Button = findViewById(R.id.btnTarea3)
-        button.setOnClickListener {
-            Toast.makeText(this, "Tarea 3 selecionada", Toast.LENGTH_SHORT).show()
-        }
-    }
-    **/
-    //cierre de metodos para selecionar una tarea
-    private fun salir (nombre : String){
+    private fun salir (nombre: String, proyecto: String){
         val button : Button = findViewById(R.id.btnVolver)
         button.setOnClickListener{
             val intent = Intent(this, InicioActivity::class.java).apply {
                 putExtra("nombre", nombre)
+                putExtra("proyecto", proyecto)
             }
             startActivity(intent)
         }
     }
-    private fun inicio (nombre : String){
+    private fun inicio (nombre: String, proyecto: String){
         val button : Button = findViewById(R.id.btnMenu)
         button.setOnClickListener{
             val intent = Intent(this, InicioActivity::class.java).apply {
                 putExtra("nombre", nombre)
+                putExtra("proyecto", proyecto)
             }
             startActivity(intent)
         }
     }
-    private fun notificaciones(nombre: String){
+    private fun notificaciones(nombre: String, proyecto: String){
         val button : Button = findViewById(R.id.btnNotificaciones)
         button.setOnClickListener{
             val intent = Intent(this, NotificacionesActivity::class.java).apply {
                 putExtra("nombre", nombre)
+                putExtra("proyecto", proyecto)
             }
             startActivity(intent)
         }
     }
-    private fun cuenta(nombre: String){
+    private fun cuenta(nombre: String, proyecto: String){
         val button : Button = findViewById(R.id.btnCuenta)
         button.setOnClickListener{
             val intent = Intent(this, CuentaActivity::class.java).apply {
                 putExtra("nombre", nombre)
+                putExtra("proyecto", proyecto)
             }
             startActivity(intent)
         }

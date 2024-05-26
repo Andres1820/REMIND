@@ -21,47 +21,51 @@ class NotificacionesActivity : AppCompatActivity() {
         }
         //Se reciben y posteriormente se cargan los parametros de la activity anterior
         val nombre = intent.getStringExtra("nombre")
+        val proyecto = intent.getStringExtra("proyecto")
         //Toast.makeText(this, nombre, Toast.LENGTH_SHORT).show()
-
-        misTarea(nombre.toString())
-        salir(nombre.toString())
-        inicio(nombre.toString())
-        cuenta(nombre.toString())
+        misTarea(nombre.toString(), proyecto.toString())
+        salir(nombre.toString(), proyecto.toString())
+        inicio(nombre.toString(), proyecto.toString())
+        cuenta(nombre.toString(), proyecto.toString())
     }
 
-    private fun misTarea(nombre: String) {
+    private fun misTarea(nombre: String, proyecto: String) {
         val button : Button = findViewById(R.id.btnMTareas)
         button.setOnClickListener{
             val intent = Intent(this, TareasActivity::class.java).apply {
                 putExtra("nombre", nombre)
+                putExtra("proyecto", proyecto)
             }
             startActivity(intent)
         }
     }
 
-    private fun salir (nombre : String){
+    private fun salir (nombre: String, proyecto: String){
         val button : Button = findViewById(R.id.btnVolver)
         button.setOnClickListener{
             val intent = Intent(this, InicioActivity::class.java).apply {
                 putExtra("nombre", nombre)
+                putExtra("proyecto", proyecto)
             }
             startActivity(intent)
         }
     }
-    private fun inicio (nombre : String){
+    private fun inicio (nombre: String, proyecto: String){
         val button : Button = findViewById(R.id.btnMenu)
         button.setOnClickListener{
             val intent = Intent(this, InicioActivity::class.java).apply {
                 putExtra("nombre", nombre)
+                putExtra("proyecto", proyecto)
             }
             startActivity(intent)
         }
     }
-    private fun cuenta(nombre : String){
+    private fun cuenta(nombre: String, proyecto: String){
         val button : Button = findViewById(R.id.btnCuenta)
         button.setOnClickListener{
             val intent = Intent(this, CuentaActivity::class.java).apply {
                 putExtra("nombre", nombre)
+                putExtra("proyecto", proyecto)
             }
             startActivity(intent)
         }

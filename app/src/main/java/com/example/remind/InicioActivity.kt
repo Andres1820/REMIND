@@ -23,17 +23,18 @@ class InicioActivity : AppCompatActivity() {
             insets
         }
         val nombre = intent.getStringExtra("nombre")
+        val proyecto = intent.getStringExtra("proyecto")
         /**
         //Prueba de recepción correcta de parametros entre activity's
         Toast.makeText(this, nombre, Toast.LENGTH_SHORT).show()
         **/
         proyectoUno(nombre.toString())
-        proyectoDos()
-        proyectoTres()
+        proyectoDos(nombre.toString())
+        proyectoTres(nombre.toString())
         MisTareas()
         //nuevoProyecto(nombre.toString())
-        notificaciones(nombre.toString())
-        cuenta(nombre.toString())
+        notificaciones(nombre.toString(), proyecto.toString())
+        cuenta(nombre.toString(), proyecto.toString())
     }
     //metodos para selecionar un proyecto
     private fun proyectoUno(nombre: String){
@@ -41,24 +42,34 @@ class InicioActivity : AppCompatActivity() {
         button.setOnClickListener {
             val intent = Intent(this, TareasActivity::class.java).apply {
                 putExtra("nombre", nombre)
+                putExtra("proyecto", "Proyecto 1")
             }
             startActivity(intent)
         }
     }
 
-    private fun proyectoDos(){
+    private fun proyectoDos(nombre: String){
         val button :Button = findViewById(R.id.btnProyecto2)
         button.setOnClickListener {
-            Toast.makeText(this, "Proyecto 2 selecionado", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, TareasActivity::class.java).apply {
+                putExtra("nombre", nombre)
+                putExtra("proyecto", "Proyecto 2")
+            }
+            startActivity(intent)
         }
     }
 
-    private fun proyectoTres(){
+    private fun proyectoTres(nombre: String){
         val button :Button = findViewById(R.id.btnProyecto3)
         button.setOnClickListener {
-            Toast.makeText(this, "Proyecto 3 selecionado", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, TareasActivity::class.java).apply {
+                putExtra("nombre", nombre)
+                putExtra("proyecto", "Proyecto 3")
+            }
+            startActivity(intent)
         }
     }
+
     //cierre de metodos para selecionar un proyecto
     private fun MisTareas() {
         val button: Button = findViewById(R.id.btnMTareas)
@@ -100,20 +111,22 @@ class InicioActivity : AppCompatActivity() {
         }
     }
     **/
-    private fun notificaciones(nombre : String){
+    private fun notificaciones(nombre: String, proyecto: String){
         val button : Button = findViewById(R.id.btnNotificaciones)
         button.setOnClickListener{
             val intent = Intent(this, NotificacionesActivity::class.java).apply {
                 putExtra("nombre", nombre)
+                putExtra("proyecto", proyecto)
             }
             startActivity(intent)
         }
     }
-    private fun cuenta(nombre : String){
+    private fun cuenta(nombre: String, proyecto: String){
         val button : Button = findViewById(R.id.btnCuenta)
         button.setOnClickListener{
             val intent = Intent(this, CuentaActivity::class.java).apply {
                 putExtra("nombre", nombre)
+                putExtra("proyecto", proyecto)
             }
             startActivity(intent)
         }

@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/nombre"
                 android:inputType="text"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
         </LinearLayout>
 
@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/correo"
                 android:inputType="text"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
         </LinearLayout>
 
@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/contrase_a"
                 android:inputType="textPassword"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
         </LinearLayout>
 

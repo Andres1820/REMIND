@@ -36,7 +36,7 @@
                 android:gravity="left"
                 android:hint="@string/correo"
                 android:inputType="textEmailAddress"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
         </LinearLayout>
 
@@ -55,7 +55,7 @@
                 android:gravity="left"
                 android:hint="@string/contrase_a"
                 android:inputType="textPassword"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
         </LinearLayout>
 

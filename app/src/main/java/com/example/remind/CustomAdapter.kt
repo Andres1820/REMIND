@@ -1,5 +1,6 @@
 package com.example.remind
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,17 +19,20 @@ class CustomAdapter: RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
         "Hacer seguimiento a los compromisos",
         "Asistir a las Mesas de Riesgos")
     val imagenes = intArrayOf(R.drawable.logo_remind_preview_rev_1, R.drawable.logo_remind_preview_rev_1,R.drawable.logo_remind_preview_rev_1,R.drawable.logo_remind_preview_rev_1)
+    val botones = arrayOf("Tarea 1", "Tarea 2","Tarea 3","Tarea 4")
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         var image: ImageView
         var titulo: TextView
         var fecha: TextView
         var detalle: TextView
+        var button: Button
         init {
             image = itemView.findViewById(R.id.imagen)
             titulo = itemView.findViewById(R.id.titulo)
             fecha = itemView.findViewById(R.id.fecha)
             detalle = itemView.findViewById(R.id.detalles)
+            button = itemView.findViewById<Button?>(R.id.btnSel)
         }
     }
 
