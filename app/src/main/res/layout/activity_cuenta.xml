@@ -49,7 +49,7 @@
                 android:layout_marginHorizontal="10dp"
                 android:gravity="center"
                 android:text="@string/cuenta"
-                android:textColor="#000000"
+                android:textColor="#424549"
                 android:textSize="30sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -68,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/nombre"
-            android:textColor="@color/black"
+            android:textColor="#424549"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -99,8 +99,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_weight="1.2"
         android:background="#EEF6FB"
-        android:layout_weight="1"
 
         android:gravity="center_vertical"
 
@@ -110,49 +110,53 @@
             android:id="@+id/btnMenu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#000000"
-            android:textColor="@color/white"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="3dp"
+            android:layout_marginRight="1dp"
             android:layout_weight="1"
+            android:backgroundTint="#7289DA"
             android:text="@string/menu"
-            android:textSize="11dp" />
+            android:textColor="@color/white"
+            android:textSize="11dp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnMTareas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#000000"
-            android:layout_marginLeft="3dp"
-            android:layout_marginRight="3dp"
-            android:textColor="@color/white"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
             android:layout_weight="1"
+            android:backgroundTint="#7289DA"
             android:text="@string/mis_tareas"
-            android:textSize="10dp" />
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnNotificaciones"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#000000"
-            android:layout_marginLeft="3dp"
-            android:layout_marginRight="3dp"
-            android:textColor="@color/white"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
             android:layout_weight="1"
+            android:backgroundTint="#7289DA"
             android:text="@string/alerta"
-            android:textSize="10dp" />
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnCuenta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="3dp"
+            android:layout_marginLeft="1dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:backgroundTint="#FFD80C"
+            android:backgroundTint="#7289DA"
             android:text="@string/cuenta"
             android:textColor="@color/white"
-            android:textSize="11dp" />
+            android:textSize="11dp"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </LinearLayout>

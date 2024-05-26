@@ -1,67 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="360dp"
-    android:layout_height="400dp"
-    android:layout_marginHorizontal="5dp"
-    android:gravity="center_horizontal"
-    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnCerrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="15dp"
-        android:backgroundTint="#7289da" />
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="15dp"
-        android:layout_marginHorizontal="10dp"
-        android:layout_weight="1"
-        android:gravity="center_vertical"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="10dp"
+        android:gravity="center_horizontal"
         android:orientation="vertical">
 
-
-        <EditText
-            android:id="@+id/correo"
-            android:layout_width="340dp"
+        <Button
+            android:id="@+id/btnCerrar"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="left"
-            android:hint="@string/correo"
-            android:inputType="textEmailAddress"
-            android:textSize="30dp" />
+            android:backgroundTint="#7289da"
+            android:textColor="@android:color/background_light"
+            android:layout_marginVertical="10dp"
+            android:text="X" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="left|center_vertical"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/correo"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:hint="@string/correo"
+                android:inputType="textEmailAddress"
+                android:textSize="30dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="left|center_vertical"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/contraseña"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:hint="@string/contrase_a"
+                android:inputType="textPassword"
+                android:textSize="30dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnIngresar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:backgroundTint="#7289da"
+            android:textColor="@android:color/background_light"
+            android:text="@string/ingresar"
+            android:textSize="24sp" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_weight="1"
-        android:gravity="center_vertical"
-        android:orientation="vertical">
-
-
-        <EditText
-            android:id="@+id/contraseña"
-            android:layout_width="340dp"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:hint="@string/contrase_a"
-            android:inputType="textPassword"
-            android:textSize="30dp" />
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/btnIngresar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#7289da"
-        android:layout_marginVertical="15dp"
-        android:text="@string/ingresar"
-        android:textSize="30sp" />
-
-</LinearLayout>
+</androidx.cardview.widget.CardView>

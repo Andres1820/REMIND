@@ -27,19 +27,22 @@ class InicioActivity : AppCompatActivity() {
         //Prueba de recepción correcta de parametros entre activity's
         Toast.makeText(this, nombre, Toast.LENGTH_SHORT).show()
         **/
-        proyectoUno()
+        proyectoUno(nombre.toString())
         proyectoDos()
         proyectoTres()
-        Alerta()
+        MisTareas()
         //nuevoProyecto(nombre.toString())
         notificaciones(nombre.toString())
         cuenta(nombre.toString())
     }
     //metodos para selecionar un proyecto
-    private fun proyectoUno(){
+    private fun proyectoUno(nombre: String){
         val button :Button = findViewById(R.id.btnProyecto1)
         button.setOnClickListener {
-            Toast.makeText(this, "Proyecto 1 selecionado", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, TareasActivity::class.java).apply {
+                putExtra("nombre", nombre)
+            }
+            startActivity(intent)
         }
     }
 
@@ -57,12 +60,36 @@ class InicioActivity : AppCompatActivity() {
         }
     }
     //cierre de metodos para selecionar un proyecto
-    private fun Alerta() {
+    private fun MisTareas() {
         val button: Button = findViewById(R.id.btnMTareas)
         button.setOnClickListener {
-            Toast.makeText(this, "Debes seleccionar un proyecto", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Por favor selecciona un proyecto", Toast.LENGTH_SHORT).show()
         }
     }
+    //La activity no funciona y genera que la aplicación se cierre
+    /**
+    private fun showDialogSelProyecto(){
+        val dialog = Dialog(this)
+        dialog.setContentView(R.layout.dialog_sel_proyecto)
+
+        val dialogEditTextTitulo = dialog.findViewById<EditText>(R.id.Titulo)
+        val dialogButtonCerrar = dialog.findViewById<Button>(R.id.btnCerrar)
+        val dialogButtonProyecto1 = dialog.findViewById<Button>(R.id.btnProyecto1)
+        val dialogButtonProyecto2 = dialog.findViewById<Button>(R.id.btnProyecto2)
+        val dialogButtonProyecto3 = dialog.findViewById<Button>(R.id.btnProyecto3)
+
+        dialogButtonProyecto1.setOnClickListener {
+            dialogButtonProyecto1.setOnClickListener{
+                val intent = Intent(this, InicioActivity::class.java)
+                startActivity(intent)
+            }
+        }
+        dialogButtonCerrar.setOnClickListener {
+            dialog.dismiss()
+        }
+        dialog.show()
+    }
+    **/
     //La activity no funciona y genera que la aplicación se cierre
     /**
     private fun nuevoProyecto(nombre : String) {
